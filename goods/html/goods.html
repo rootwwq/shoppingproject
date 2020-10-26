@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>商品详情</title>
+    <!-- ================== 开始基础CSS调用 ================== -->
+    <link rel="icon" type="image/x-icon" href="https://www.kingpower-cn.com/static/img/favicon.jpg">
+    <link href="../css/base.css" rel="stylesheet" type="text/css">
+    <link href="../css/web_common.css" rel="stylesheet" type="text/css">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css" rel="stylesheet">
+    <link href="../css/home_layout.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/layer.css" id="layui_layer_skinlayercss">
+
+</head>
+
+<body><span style="display:none;" id="cnzz_stat_icon_1271274367"><a
+            href="https://www.cnzz.com/stat/website.php?web_id=1271274367" title="站长统计">站长统计</a></span>
+
+    <div class="public-top-layout public-top-layout-shorcut">
+        <div class="topbar wrapper">
+            <div class="left">
+                <div class="mall_home">
+                    <a href="https://www.kingpower-cn.com/">
+                        <!-- <span class="icon"></span> -->
+                        商城首页
+                    </a>
+                </div>
+                <!-- s 配送至-->
+                <!-- E 配送至-->
+                <div class="drop-down drop-down-shortcut-box">
+                    <div class="language" id="languageType">CN 中文<i class="fa fa-angle-down"></i></div>
+                    <ul class="language-div" id="languageDiv" style="display: none;">
+                        <li><a href="https://www.kingpower.com/?lang=en">EN 英文</a></li>
+                        <li><a href="https://www.kingpower.com/?lang=th">TH 泰文</a></li>
+                    </ul>
+                </div>
+                <div class="exchange_rate exchange_rate-shortuct-box">
+                    <div class="rate"> 今日汇率</div>
+                    <div class="representative_party-shortcut"><span></span><span> → </span><span></span></div>
+                    <div class="exchange_rate_all_box" style="margin-left:5px;">
+                        <div class="list" id="list">
+                            <table cellspacing="0" cellpadding="0" style="width: 930px; border: 0px;">
+                                <tbody>
+                                    <tr>
+                                        <td id="list1">
+                                            <table style="border: 0px;" cellpadding="0" cellspacing="0">
+                                                <tbody>
+                                                    <tr id="pic">
+                                                        <td>支付宝 0.2180 </td>
+                                                        <td>银联 0.2151</td>
+                                                        <td>微信 0.2144<img src="../img/sub_order_13.png"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td id="list2"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right" id="quickMenu">
+                <dl class="top-menu login">
+                    <dt class="top-menu-title normal">
+                        <a href="javascript:; class=" login-link">登录</a>
+                        <a href="javascript:;">注册</a>
+                    </dt>
+
+                </dl>
+                <dl class="top-menu my-order">
+                    <dt class="top-menu-title">
+                        <a href="https://www.kingpower-cn.com/member/orders/list">我的订单</a>
+                        <!-- <span class="arrow"></span> -->
+                    </dt>
+                    <dd class="top-menu-con">
+                        <ul>
+                            <li>
+                                <a href="https://www.kingpower-cn.com/member/orders/list/?ordersState=new">待付款</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kingpower-cn.com/member/orders/list/?ordersState=pay">待提货</a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="top-menu my-mall">
+                    <dt class="top-menu-title">
+                        <a href="https://www.kingpower-cn.com/member/">个人中心</a>
+                        <!-- <span class="arrow"></span> -->
+                    </dt>
+                    <dd class="top-menu-con">
+                        <ul class="user-centent-menu">
+                            <li>
+                                <a href="https://www.kingpower-cn.com/member/message/list" target="_top">我的消息</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kingpower-cn.com/member/favorites/goods" target="_top">我的收藏</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kingpower-cn.com/member/coupon/list?couponState=0"
+                                    target="_top">我的优惠券</a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="top-menu call-center">
+                    <dt class="top-menu-title">
+                        <a href="https://www.kingpower-cn.com/serviceCenter">客服中心</a>
+                        <!-- <span class="arrow"></span> -->
+                    </dt>
+                    <dd class="top-menu-con">
+                        <ul>
+                            <li>
+                                <a href="https://www.kingpower-cn.com/serviceCenter/question">常见问题</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kingpower-cn.com/serviceCenter/reading">购物须知</a>
+                            </li>
+                            <li>
+                                <a href="https://www.kingpower-cn.com/serviceCenter/guide">取货指南</a>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="top-menu mobile-mall">
+                    <dt class="top-menu-title"><span class="icon"></span>手机版<span class="arrow"></span></dt>
+                    <dd class="top-menu-con"> <span class="QRcode"> <img src="../img/url.gif">
+                            <p>下载王权免税APP<br>享受更多促销活动</p>
+                        </span></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="header-wrap">
+        <header class="public-head-layout wrapper">
+            <h1 class="site-logo"><a href="https://www.kingpower-cn.com/"><img src="../img/logo.png" alt=""></a></h1>
+            <div class=""></div>
+            <div class="head-search-layout">
+                <div class="head-search-tab" id="searchTab" style="display: none"> <span><a href="javascript:;"
+                            class="selected" data-sign="goods">商品</a></span></div>
+                <div class="head-search-bar" id="head-search-bar">
+                    <form action="https://www.kingpower-cn.com/search" method="get" class="search-form"
+                        id="headerSearchForm">
+                        <span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span><input
+                            name="keyword" id="keyword" type="text" class="input-text ui-autocomplete-input" value="香水"
+                            maxlength="60" placeholder="粉底" autocomplete="off">
+                        <input type="submit" id="buttonSearch" value="搜 索" class="input-submit">
+                    </form>
+                    <!-- 搜索提示div 开始 -->
+                    <div class="search-tip microsite-list" style="display: none;"></div>
+                    <div class="search-tip" id="search-tip" style="display: none;">
+                        <div class="search-history">
+                            <div class="title">历史纪录<a href="javascript:void(0);" id="search-his-del">清除</a></div>
+                            <ul id="search-his-list">
+                                <li><a href="https://www.kingpower-cn.com/search?&amp;keyword=%E5%8F%A3%E7%BA%A2">口红</a>
+                                </li>
+                                <li><a
+                                        href="https://www.kingpower-cn.com/search?&amp;keyword=SKII%E7%A5%9E%E4%BB%99%E6%B0%B4">SKII神仙水</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search-hot">
+                            <div class="title">热门搜索...</div>
+                        </div>
+                    </div>
+                    <!-- 搜索提示div 结束 -->
+                </div>
+
+            </div>
+            <!-- 头部购物车_Star -->
+            <div id="topMyCart" class="my-cart">
+                <div class="my-cart-tit"><i class="my-cart-ico"></i><a href="https://www.kingpower-cn.com/cart/list"
+                        title="购物车">购物车</a>
+                    <!--<i data-red-point style="display: none;" class="mub"></i>件-->
+                </div>
+                <div class="my-cart-con">
+                    <div class="spacer"></div>
+                    <div class="sub-title">
+                        <h4>最新加入的商品</h4>
+                    </div>
+                </div>
+                <!-- 头部购物车_End -->
+
+                <!-- 头部二维码 start-->
+                <div class="QR_code" style="display:none;">
+                    <div class="code">
+                        <img src="../img/default_cr.png" alt="" class="shows">
+                    </div>
+                    <div class="attention">
+                        <div class="attention_box1">
+                            <img src="../img/default_cr.png" alt="" class="">
+                        </div>
+                        <div class="attention_box2">
+                            <img src="../img/default_cr.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- 头部二维码 end-->
+        </header>
+    </div>
+    <nav class="public-nav-layout">
+        <div class="wrapper">
+            <div class="all-category">
+                <div class="title">
+                    <h3><a href="javascript:;">分类</a></h3>
+                    <!-- <i class="arrow-down"></i> -->
+                </div>
+                <div class="min-title"><a href="https://www.kingpower-cn.com/category">全部分类</a><span
+                        class="arrow-down"></span>
+                </div>
+                <div id="topCategoryMenu" class="category">
+                    <ul class="menu">
+                        <li cat_menu_id="1" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="javascript:;" class="cate-menu-lk">护肤/美体</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="1">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="javascript:;">基础护肤<i class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a href="javascript:;">洁面/卸妆</a> <a href="javascript:;">柔肤水/乳液</a> <a
+                                                    href="javascript:;">唇部护理</a> <a
+                                                    href="https://www.kingpower-cn.com/search?cat=58&amp;type=cat">面霜/晚霜</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=59&amp;type=cat">眼部护理</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=60&amp;type=cat">精华</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=61&amp;type=cat">面膜</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=62&amp;type=cat">防晒</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=63&amp;type=cat">角质素</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=64&amp;type=cat">护肤套装</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=304&amp;type=cat">喷雾</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=13&amp;type=cat">身体护理<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=305&amp;type=cat">肥皂</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=65&amp;type=cat">沐浴露</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=66&amp;type=cat">身体乳/霜</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=67&amp;type=cat">洗发/护发</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=68&amp;type=cat">颈部手足</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=69&amp;type=cat">胸部护理</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=70&amp;type=cat">护理套装</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=71&amp;type=cat">其他特殊护理</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=72&amp;type=cat">精油</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=74&amp;type=cat">防晒</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=75&amp;type=cat">磨砂膏</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=14&amp;type=cat">男士护理<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=76&amp;type=cat">剃须/须后护理</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=77&amp;type=cat">洁面/卸妆</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=78&amp;type=cat">面部护理</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=79&amp;type=cat">防晒</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=80&amp;type=cat">身体护理</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=81&amp;type=cat">护理套装</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=15&amp;type=cat">美容工具<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=82&amp;type=cat">洁面器</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=85&amp;type=cat">其他</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <div class="img_dived img_div_one"><a title="" data-link-value="skii"
+                                                href="https://www.kingpower-cn.com/search?keyword=skii">
+                                                <img src="../img/1e050183a742a901a72d5f028180c8d0.jpg"> </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="2" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=2&amp;type=cat"
+                                    class="cate-menu-lk">彩妆/香氛</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="2">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=16&amp;type=cat">面部<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=314&amp;type=cat">定妆喷雾</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=86&amp;type=cat">粉底液/霜</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=87&amp;type=cat">BB霜/CC霜</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=88&amp;type=cat">气垫粉饼</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=89&amp;type=cat">散粉/蜜粉</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=90&amp;type=cat">腮红</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=91&amp;type=cat">修容/高光</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=92&amp;type=cat">妆前乳/霜</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=93&amp;type=cat">隔离</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=94&amp;type=cat">遮瑕</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=18&amp;type=cat">唇部<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a href="https://www.kingpower-cn.com/search?cat=99&amp;type=cat">口红</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=100&amp;type=cat">唇彩</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=101&amp;type=cat">唇膏</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=102&amp;type=cat">唇蜜/唇釉</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=103&amp;type=cat">唇笔/唇线</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=17&amp;type=cat">眼部<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=95&amp;type=cat">眉笔/眉粉</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=96&amp;type=cat">眼影</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=97&amp;type=cat">眼线</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=98&amp;type=cat">睫毛膏</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=20&amp;type=cat">香氛<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=335&amp;type=cat">固体香膏</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=110&amp;type=cat">浓香水</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=111&amp;type=cat">淡香水</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=112&amp;type=cat">古龙香水</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=113&amp;type=cat">套装</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=114&amp;type=cat">止汗/除臭</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=22&amp;type=cat">套装<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=119&amp;type=cat">彩盘</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=120&amp;type=cat">其他套装</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=21&amp;type=cat">美甲<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=115&amp;type=cat">指甲油</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=19&amp;type=cat">工具<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=104&amp;type=cat">睫毛夹</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=105&amp;type=cat">眉笔刀</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=106&amp;type=cat">粉扑/海绵</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=107&amp;type=cat">化妆刷</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=108&amp;type=cat">化妆盒</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=298&amp;type=cat">其他</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <div class="img_dived img_div_one"><a title=""
+                                                data-link-value="https://www.kingpower-cn.com/microweb/hermes/index.html"
+                                                href="https://www.kingpower-cn.com/microweb/hermes/index.html"> <img
+                                                    src="../img/9fe56d7c218ac157efed3875eed61ca2.jpg"> </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="3" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=3&amp;type=cat"
+                                    class="cate-menu-lk">时尚配饰</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="3">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=23&amp;type=cat">腕表<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=126&amp;type=cat">男士手表</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=128&amp;type=cat">女士手表</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="javascript:;">眼镜<i class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=122&amp;type=cat">太阳镜</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=24&amp;type=cat">珠宝首饰<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=130&amp;type=cat">戒指</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=131&amp;type=cat">项链/链坠</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=132&amp;type=cat">耳饰</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=133&amp;type=cat">手链/手镯</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=136&amp;type=cat">套装</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=25&amp;type=cat">服饰配饰<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=137&amp;type=cat">腰带</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=139&amp;type=cat">丝巾/围巾/披肩</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=141&amp;type=cat">帽子</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=26&amp;type=cat">其他配饰<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=146&amp;type=cat">钥匙圈</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=147&amp;type=cat">其他</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=148&amp;type=cat">行李配件</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <div class="img_dived img_div_one"><a title=""
+                                                data-link-value="https://www.kingpower-cn.com/search?keyword=%E6%96%BD%E5%8D%8E%E6%B4%9B%E4%B8%96%E5%A5%87"
+                                                href="https://www.kingpower-cn.com/search?keyword=%E6%96%BD%E5%8D%8E%E6%B4%9B%E4%B8%96%E5%A5%87">
+                                                <img src="../img/e9b19be170116142810297cd88b8f247.jpg"> </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="4" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=4&amp;type=cat"
+                                    class="cate-menu-lk">箱包/钱包</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="4">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=27&amp;type=cat">女士<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=151&amp;type=cat">手拿包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=152&amp;type=cat">双肩包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=153&amp;type=cat">手提包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=154&amp;type=cat">斜挎包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=155&amp;type=cat">钱包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=156&amp;type=cat">小型包具</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=157&amp;type=cat">休闲包</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="javascript:;">男士<i class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=159&amp;type=cat">双肩包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=160&amp;type=cat">手提包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=161&amp;type=cat">斜挎包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=162&amp;type=cat">钱包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=163&amp;type=cat">小型包具</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=164&amp;type=cat">休闲包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=289&amp;type=cat">邮差包</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=29&amp;type=cat">商旅<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=165&amp;type=cat">公文包</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=166&amp;type=cat">行李箱</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=167&amp;type=cat">旅行袋</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=168&amp;type=cat">配件</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=297&amp;type=cat">旅行包</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=30&amp;type=cat">儿童<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=169&amp;type=cat">书包/背包</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <div class="img_dived img_div_one"><a title=""
+                                                data-link-value="https://www.kingpower-cn.com/brand/ANY%20DI"
+                                                href="https://www.kingpower-cn.com/brand/ANY%20DI"> <img
+                                                    src="../img/0e50e758411e51ac29d7677beb43509e.png"> </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="10" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=10&amp;type=cat"
+                                    class="cate-menu-lk">泰国馆</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="10">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=299&amp;type=cat">泰国美妆<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=300&amp;type=cat">护肤/美体</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=301&amp;type=cat">彩妆/香氛</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=292&amp;type=cat">传统医药<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=293&amp;type=cat">传统医药</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=52&amp;type=cat">纪念品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=280&amp;type=cat">其他纪念品</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=281&amp;type=cat">手工艺品</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=282&amp;type=cat">钥匙扣</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=291&amp;type=cat">药膏</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <div class="img_dived img_div_one"><a title=""
+                                                data-link-value="https://www.kingpower-cn.com/brand/BRUSHWORK"
+                                                href="https://www.kingpower-cn.com/brand/BRUSHWORK"> <img
+                                                    src="../img/baaca4d5abd3c3fd922f59e8390e817a.jpg"> </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="9" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=9&amp;type=cat"
+                                    class="cate-menu-lk">食品/干果</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="9">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=316&amp;type=cat">冲调<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=317&amp;type=cat">蜂蜜</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=328&amp;type=cat">茶</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=47&amp;type=cat">零食<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=263&amp;type=cat">巧克力</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=264&amp;type=cat">糖果</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=265&amp;type=cat">坚果/干果</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=266&amp;type=cat">饼干</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=267&amp;type=cat">其他</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=48&amp;type=cat">酒水<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=268&amp;type=cat">葡萄酒</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=269&amp;type=cat">洋酒</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=270&amp;type=cat">咖啡</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=272&amp;type=cat">非酒精饮料</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=49&amp;type=cat">保健品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=273&amp;type=cat">维生素</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=50&amp;type=cat">粮食/烹饪<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=315&amp;type=cat">酱料</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=276&amp;type=cat">大米/黑米</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=277&amp;type=cat">速食</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=278&amp;type=cat">烹饪食材</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <div class="img_dived img_div_one"><a title=""
+                                                data-link-value="https://www.kingpower-cn.com/search?cat=47&amp;type=cat"
+                                                href="https://www.kingpower-cn.com/search?cat=47&amp;type=cat"> <img
+                                                    src="../img/f7eba8909b541a6ec3a988d815ca36bf.png"> </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="6" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=6&amp;type=cat"
+                                    class="cate-menu-lk">家居生活</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="6">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=310&amp;type=cat">体育建材<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=311&amp;type=cat">体育用品</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=324&amp;type=cat">运动户外<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=325&amp;type=cat">户外装备</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=35&amp;type=cat">生活用品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=188&amp;type=cat">精油香薰/蜡烛</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=189&amp;type=cat">整理收纳</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=190&amp;type=cat">床上用品</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=287&amp;type=cat">其他</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=36&amp;type=cat">厨房用品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=201&amp;type=cat">酒杯器具</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=203&amp;type=cat">开瓶器</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=207&amp;type=cat">保温杯/保温壶</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=37&amp;type=cat">厨房电器<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=294&amp;type=cat">面包机</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=209&amp;type=cat">咖啡机</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=210&amp;type=cat">搅拌机</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=211&amp;type=cat">电水壶</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=212&amp;type=cat">其他</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=38&amp;type=cat">个护健康<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=215&amp;type=cat">电动剃须刀</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=216&amp;type=cat">保健按摩</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=217&amp;type=cat">美容仪</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=218&amp;type=cat">电动牙刷/牙膏</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=219&amp;type=cat">其他</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=220&amp;type=cat">吹风机</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=221&amp;type=cat">造型</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=222&amp;type=cat">口腔护理</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=194&amp;type=cat">生活电器<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=193&amp;type=cat">其他</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=195&amp;type=cat">扫地机器人</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=196&amp;type=cat">手持吸尘器</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=199&amp;type=cat">净化器</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <div class="img_dived img_div_one"><a title=""
+                                                data-link-value="https://www.kingpower-cn.com/brand/HHOM"
+                                                href="https://www.kingpower-cn.com/brand/HHOM"> <img
+                                                    src="../img/af646dba65da176702366a5cdfd92ddd.png"> </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="8" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=8&amp;type=cat"
+                                    class="cate-menu-lk">数码电器</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="8">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=42&amp;type=cat">数码相机<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=308&amp;type=cat">运动相机</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=331&amp;type=cat">摄像机</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=333&amp;type=cat">记录仪</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=334&amp;type=cat">监控</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=241&amp;type=cat">单反相机</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=242&amp;type=cat">拍立得</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=243&amp;type=cat">数码照相机</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=245&amp;type=cat">相机配件</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=246&amp;type=cat">微单相机</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=247&amp;type=cat">go
+                                                    pro</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=43&amp;type=cat">智能设备<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=286&amp;type=cat">机器人</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=248&amp;type=cat">手机</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=249&amp;type=cat">配件</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=44&amp;type=cat">电脑办公<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=250&amp;type=cat">笔记本电脑</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=251&amp;type=cat">平板电脑</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=252&amp;type=cat">鼠标/键盘</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=45&amp;type=cat">穿戴设备<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=255&amp;type=cat">智能手环</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=257&amp;type=cat">智能手表</a>
+                                                <a href="https://www.kingpower-cn.com/search?cat=258&amp;type=cat">iphone
+                                                    watch</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=46&amp;type=cat">影音娱乐<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=260&amp;type=cat">耳机/耳麦</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=261&amp;type=cat">音箱/音响</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=262&amp;type=cat">游戏机</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="7" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=7&amp;type=cat"
+                                    class="cate-menu-lk">母婴用品</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="7">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=39&amp;type=cat">婴儿<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=224&amp;type=cat">其他用品</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=229&amp;type=cat">奶粉</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=40&amp;type=cat">儿童<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=231&amp;type=cat">儿童饰品</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=232&amp;type=cat">儿童玩具</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=235&amp;type=cat">其他用品</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="5" class="cate-menu-item">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=5&amp;type=cat"
+                                    class="cate-menu-lk">服饰/鞋子</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="5">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=31&amp;type=cat">女装<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=307&amp;type=cat">泳衣</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=330&amp;type=cat">睡衣</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=171&amp;type=cat">下装</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=172&amp;type=cat">连衣裙</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=173&amp;type=cat">内衣</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=174&amp;type=cat">上装</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=175&amp;type=cat">运动装</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=321&amp;type=cat">裙子</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=32&amp;type=cat">男装<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=336&amp;type=cat">袜子</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=176&amp;type=cat">下装</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=178&amp;type=cat">上装</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=179&amp;type=cat">运动装</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=33&amp;type=cat">童装<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=183&amp;type=cat">连衣裙</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=185&amp;type=cat">上装</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=34&amp;type=cat">鞋子<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=323&amp;type=cat">浮潜鞋</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=326&amp;type=cat">拖鞋</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=332&amp;type=cat">高跟鞋</a>
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=187&amp;type=cat">休闲鞋</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="sub-class-right">
+                                    <div class="adv-promotions">
+                                        <div class="img_dived img_div_one"><a title=""
+                                                data-link-value="https://www.kingpower-cn.com/brand/Double-Goose"
+                                                href="https://www.kingpower-cn.com/brand/Double-Goose"> <img
+                                                    src="../img/482425bdbdb8a5133095cb7aa0dc6fd7.jpg"> </a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li cat_menu_id="11" class="cate-menu-item" style="display: none;">
+                            <div class="class bot"><span class="arrow"></span>
+
+                                <a href="https://www.kingpower-cn.com/search?cat=11&amp;type=cat"
+                                    class="cate-menu-lk">办公/礼品</a>
+                            </div>
+                            <div class="cate-part" cat_menu_id="11">
+                                <div class="cate-part-col1">
+                                    <div class="cate-detail">
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=319&amp;type=cat">礼品<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=320&amp;type=cat">手办</a>
+                                            </dd>
+                                        </dl>
+                                        <dl class="cate-detail-item">
+                                            <dt class="cate-detail-tit">
+                                                <a href="https://www.kingpower-cn.com/search?cat=53&amp;type=cat">书写系列<i
+                                                        class="fa fa-angle-right m-l-5 m-r-0"
+                                                        aria-hidden="true"></i></a>
+                                            </dt>
+                                            <dd class="cate-detail-con">
+                                                <a
+                                                    href="https://www.kingpower-cn.com/search?cat=283&amp;type=cat">书写工具</a>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <ul class="site-menu">
+                <li><a href="https://www.kingpower-cn.com/" class="current">首页</a></li>
+                <li>
+                    <a href="https://www.kingpower-cn.com//search?deliveryType=2"
+                        style="background: #0b56a4;color: #fff;border-radius: 4px;">泰国境内直邮</a>
+                </li>
+                <li><a href="https://www.kingpower-cn.com/hotsale">热销排行</a></li>
+                <li><a href="https://www.kingpower-cn.com/goods/newGood">新品</a></li>
+                <li><a href="https://www.kingpower-cn.com/discountSearch">促销</a></li>
+                <li><a href="https://www.kingpower-cn.com/brand">品牌</a></li>
+                <li><a href="https://www.kingpower-cn.com/vouchercenter/index">领券中心</a></li>
+                <li><a href="http://www.taihaitao.com/">泰海淘</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <link href="../css/web_toolbar.css" rel="stylesheet" type="text/css">
+    <div class="nc-toolbar-wrap" id="ncGlobalToolbar">
+        <div class="nc-toolbar">
+            <!-- S 弹出层区域 -->
+            <div class="nc-toolbar-panels">
+                <!-- S 购物车展示区域 -->
+                <div data-nc-tbar-name="cart" class="nc-toolbar-panel nc-tbar-panel-cart"
+                    style="visibility: visible; z-index: 2;">
+                    <h3 class="nc-tbar-panel-header J-panel-header"> <a href="https://www.kingpower-cn.com/cart/list"
+                            class="title"> <i></i> <em class="title">购物车</em> </a> <span class="close-panel"></span>
+                    </h3>
+                    <div class="nc-tbar-panel-main">
+                        <div class="nc-tbar-panel-content" style="height: 576px;">
+                            <div>
+                                <div class="nc-tbar-cart-list" id="tbarCartGoodsList">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nc-tbar-panel-footer">
+                        <div class="nc-tbar-checkout" data-goods-price="">
+                            <div class="jtc-number">共&nbsp;<strong id="tbarCartCount">0</strong>&nbsp;件商品</div>
+                            <div class="jtc-sum"> 共计： <strong class="tbarCartotal" id="tbarCartotal"></strong> </div>
+                            <a class="jtc-btn" href="https://www.kingpower-cn.com/cart/list">去购物车结算</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- E 购物车展示区域 -->
+
+                <!-- S 关注 -->
+                <div data-nc-tbar-name="follow" class="nc-toolbar-panel nc-tbar-panel-follow">
+                    <h3 class="nc-tbar-panel-header J-panel-header"> <a href="javascript:;" class="title"> <i></i> <em
+                                class="title">我的收藏</em> </a> <span class="close-panel"></span> </h3>
+                    <div class="nc-tbar-panel-main">
+
+                        <div class="nc-tbar-panel-content">
+                            <div class="follow-tabcontents side_collection_box" id="tbarFollowTab">
+                                <div id="tbarFollowTabPanel" style="width:600px;position:relative">
+                                    <div class="follow-tab-content follow-product-list follow-tab-content-slected"
+                                        id="followTabContent_goods">
+                                        <ul id="goodsFavListTbarFollow">
+                                        </ul>
+                                        <a href="https://www.kingpower-cn.com/member/favorites/goods"
+                                            class="follow-bottom-more">查看更多收藏商品
+                                            &gt;</a>
+                                    </div>
+                                    <div class="follow-tab-content follow-shop-list" id="followTabContent_store">
+                                        <ul id="storeFavListTbarFollow">
+                                        </ul>
+                                        <a href="https://www.kingpower-cn.com/member/favorites/store"
+                                            class="follow-bottom-more">查看更多收藏店铺&gt;</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nc-tbar-panel-footer J-panel-footer"></div>
+                </div>
+                <!-- E 关注 -->
+
+                <!-- S 足迹 -->
+                <div data-nc-tbar-name="history" class="nc-toolbar-panel nc-tbar-panel-history">
+                    <h3 class="nc-tbar-panel-header"> <a href="javascript:;" class="title"> <i></i> <em
+                                class="title">我的足迹</em>
+                        </a> <span class="close-panel"></span> </h3>
+                    <div class="nc-tbar-panel-main">
+                        <div class="nc-tbar-panel-content" id="histbarPanelContent" style="height: 626px;">
+                            <div class="jt-history-wrap">
+                                <ul id="hisListTbar">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tbar-panel-footer"></div>
+                </div>
+                <!-- E 足迹 -->
+                <!-- E 二维码展示区域 -->
+
+
+                <!-- S 二维码展示区域 -->
+                <div class="nc-toolbar-panel nc-tbar-panel-qrcode" data-nc-tbar-name="qrcode">
+                    <h3 class="nc-tbar-panel-header J-panel-header"> <i></i> <em class="title">二维码</em><span
+                            class="close-panel"></span> </h3>
+                    <div class="nc-qrcode-container">
+                        <div class="nc-tbar-qrcode-item">
+                            <img src="../img/url.gif">
+                            <div class="nc-app-download">
+                                <h1>扫描二维码<br>下载手机客户端</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- E 二维码展示区域 -->
+
+                <!-- S 汇率弹出区域 -->
+                <div data-nc-tbar-name="rate" class="nc-toolbar-panel nc-tbar-panel-rate"
+                    style="visibility: visible; z-index: 2;">
+                    <h3 class="nc-tbar-panel-header J-panel-header tool-bar-exchange-rate-box">
+                        <em class="title toolbar-exchange-h2">汇率计算</em>
+                        <span class="close-panel"></span>
+                    </h3>
+                    <div class="toolbar-exchange-rate-title">汇率</div>
+                    <div class="toolbar-exchange-rate-text-box">
+                        <div class="div1">
+                            <p class="left">
+                                <span class="span1 thailand"></span>
+                                <span class="span2">THB</span>
+                            </p>
+                            <input type="number" min="0" id="price_text" placeholder="100" alipayrate="0.21798"
+                                wxpayrate="0.21438381" unionpayrate="0.21508469">
+                        </div>
+                        <!--支付宝-->
+                        <div class="div1 div2">
+                            <p class="left">
+                                <span class="span1 "></span>
+                                <span class="span2">CNY</span>
+                            </p>
+                            <div class="right">
+                                <p class="payment_method">
+                                    <span class="img_one"></span>
+                                </p>
+                                <p class="amount_money">
+                                    <span class="money_span1" id="alipayPrice">￥21.7980</span>
+                                    <span class="money_span2">0.2180</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!--微信-->
+                        <div class="div1 div2">
+                            <p class="left">
+                                <span class="span1 enterprise"></span>
+                                <span class="span2"></span>
+                            </p>
+                            <div class="right">
+                                <p class="payment_method">
+                                    <span class="img_two"></span>
+                                    <em class="em_block"></em>
+                                </p>
+                                <p class="amount_money">
+                                    <span class="money_span1" id="wxPirce">￥21.4384</span>
+                                    <span class="money_span2">0.2144</span>
+                                </p>
+                            </div>
+                        </div>
+                        <!--银联-->
+                        <div class="div1 div2">
+                            <p class="left">
+                                <span class="span1 "></span>
+                                <span class="span2"></span>
+                            </p>
+                            <div class="right">
+                                <p class="payment_method">
+                                    <span class="img_three"></span>
+                                </p>
+                                <p class="amount_money">
+                                    <span class="money_span1" id="unionpayPirce">￥21.5085</span>
+                                    <span class="money_span2">0.2151</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- E 汇率弹出区域  -->
+
+
+                <!-- S 优惠券区域 -->
+                <!-- E 优惠券区域  -->
+
+                <!-- S 购物区域弹出区域 -->
+                <div data-nc-tbar-name="reading" class="nc-toolbar-panel nc-tbar-panel-reading"
+                    style="visibility: visible; z-index: 2;">
+                    <h3 class="nc-tbar-panel-header J-panel-header tool-bar-exchange-rate-box">
+                        <em class="title toolbar-exchange-h2">购物须知</em>
+                        <span class="close-panel"></span>
+                    </h3>
+                    <div class="nc-tbar-panel-main shopping-notes-box">
+                        <p>• 免税商品仅限出境航班乘客购买。 </p>
+                        <p>• 您可以最多提前30天购买，或者至少提前24小时以前购买。芭提雅机场至少需要48个小时提前预定，普吉国际机场至少需要96个小时提前预定。</p>
+                        <p>• 您可提货的机场包括：素万那普（Suvanabhumi）国际机场，廊曼（Don Muang ）国际机场，普吉国际机场及乌塔保(U-Tapao)国际机场。</p>
+                        <p class="guide_goods_more">
+                            <a href="https://www.kingpower-cn.com/serviceCenter/reading">查看更多&gt;</a>
+                        </p>
+                    </div>
+                </div>
+                <!-- E 购物区域弹出区域  -->
+
+                <!-- S  取货指南弹出区域 -->
+                <div data-nc-tbar-name="guide" class="nc-toolbar-panel nc-tbar-panel-guide"
+                    style="visibility: visible; z-index: 2;">
+                    <h3 class="nc-tbar-panel-header J-panel-header tool-bar-exchange-rate-box">
+                        <em class="title toolbar-exchange-h2">取货指南</em>
+                        <span class="close-panel"></span>
+                    </h3>
+                    <div class="nc-tbar-panel-main guide_goods">
+                        <p>• 请您于出境当天前往各出境场所的王权免税店取货柜台进行提货。</p>
+                        <p>• 您需要向工作人员出示：护照、登机牌、提货单或提货二维码，并确认本人身份后，即可领取免税品。</p>
+                        <p>• 请您出境之日起30天内进行提货。</p>
+                        <p>您可以在以下机场提货：</p>
+                        <p>
+                            <a href="https://www.kingpower-cn.com/serviceCenter/guide">素万那普国际机场</a>
+                            <a href="https://www.kingpower-cn.com/serviceCenter/guide">廊曼国际机场</a>
+                            <a href="https://www.kingpower-cn.com/serviceCenter/guide">普吉国际机场 </a>
+                            <a href="https://www.kingpower-cn.com/serviceCenter/guide">乌塔保国际机场</a>
+                        </p>
+                        <p class="guide_goods_more"><a href="https://www.kingpower-cn.com/serviceCenter/guide">查看更多
+                                &gt;</a></p>
+                    </div>
+                </div>
+                <!-- E  取货指南弹出区域  -->
+
+            </div>
+            <!-- E 弹出层区域 -->
+
+            <div class="nc-toolbar-header"></div>
+
+            <!-- S 悬浮小图展示区域 -->
+
+            <!-- E 悬浮小图展示区域 -->
+
+            <div class="nc-toolbar-footer">
+                <div class=" nc-toolbar-tab nc-tbar-tab-top"> <a href="javascript:;" id="tbarGoTop"> <i
+                            class="tab-ico"></i> <em class="tab-text">顶部</em> </a> </div>
+            </div>
+
+            <div class="nc-toolbar-mini"></div>
+
+        </div>
+    </div>
+
+    <link href="../css/perfect-scrollbar.min(1).css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/public.css">
+    <link href="../css/web_search.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+    <div class="wrapper nch-breadcrumb-layout">
+        <div class="nch-breadcrumb"><i class="fa"></i> <span><a href="https://www.kingpower-cn.com/">首页</a></span><span
+                class="arrow">&gt;</span> <span>搜索结果&gt;香水</span> </div>
+        <div class="clear"></div>
+    </div>
+
+
+    <div class="selector wrapper">
+        <div class="title">
+            <h3><em>搜索关键字 - <strong class="f14">“香水”</strong> - </em>筛选结果(1090)</h3>
+        </div>
+        <div class="content">
+            <dl goods-attr-item="">
+                <dt>包含分类：</dt>
+                <dd class="list attr-item">
+                    <ul>
+                        <li><a
+                                href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;cat=293">传统医药</a>
+                        </li>
+                        <li><a href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;cat=110">浓香水</a>
+                        </li>
+                        <li><a
+                                href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;cat=188">精油香薰/蜡烛</a>
+                        </li>
+                        <li><a
+                                href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;cat=224">其他用品</a>
+                        </li>
+                        <li><a
+                                href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;cat=66">身体乳/霜</a>
+                        </li>
+                        <li><a href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;cat=111">淡香水</a>
+                        </li>
+                        <li><a
+                                href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;cat=112">古龙香水</a>
+                        </li>
+                        <li><a href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;cat=68">颈部手足</a>
+                        </li>
+                        <li><a href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;cat=113">套装</a>
+                        </li>
+                    </ul>
+                </dd>
+                <dd class="all" style="display: none" data-ext-more=""> <a href="javascript:;"><span>更多</span><i
+                            class="drop-arrow"></i></a> </dd>
+            </dl>
+            <!--s 品牌区域-->
+            <!--e 品牌区域-->
+            <!-- S 属性区域-->
+        </div>
+        <!-- E 属性区域-->
+    </div>
+    <div id="mainMenuBarAnchor" style="height: 0px;"></div>
+    <div class="QR-layout secrch_nav_top" id="main-nav-holder">
+        <nav class="sort-bar" id="main-nav">
+            <div class="pin"></div>
+            <div class="sort-bar-wrap top">
+                <div class="nch-sortbar-array">
+                    <ul class="screen">
+                        <!--注释s-->
+                        <li class="selected">
+                            <a href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;sort=weight_desc"
+                                title="默认排序">默认</a>
+                        </li>
+                        <!--注释e-->
+                        <li>
+                            <a href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;sort=sale_desc"
+                                title="点击按成交量从高到低排序">销量</a>
+
+                        </li>
+
+                        <li>
+                            <a href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;sort=price_desc"
+                                class="asc" title="点击按价格从低到高排序">价格<i></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- S 价格筛选 -->
+                <div class="nch-sortbar-price fold" id="nchSortbarPrice">
+                    <div class="block">
+                        <input type="text" class="input-text" placeholder="THB" id="priceStart" value="">
+                        <span class="line">-</span>
+                        <input type="text" class="input-text" placeholder="THB" id="priceEnd" value="">
+                        <a href="javascript:;" class="btn" id="nchSortbarPriceBtn">确定</a>
+                        <a href="javascript:;" style="display: none" class="btn" id="cleanSortbarPriceBtn">清空</a>
+                    </div>
+                </div>
+                <!-- E 价格筛选 -->
+
+                <!--特价 S-->
+                <div class="fold select-gift">
+                    <span class="">
+                        <a class="gifts"
+                            href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;monthPromotion=1"><i
+                                class="input-gift"></i> 特价</a>
+                    </span>
+                </div>
+                <!--特价 E-->
+
+                <!--券 S-->
+                <div class="fold select-gift">
+                    <span class="">
+                        <a class="gifts"
+                            href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;coupon=1"><i
+                                class="input-gift"></i> 券</a>
+                    </span>
+                </div>
+                <!--券 E-->
+
+                <!--赠品 S-->
+                <div class="fold select-gift">
+                    <span class="">
+                        <a class="gifts"
+                            href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;gift=1"><i
+                                class="input-gift"></i> 赠品</a>
+                    </span>
+                </div>
+                <!--赠品 E-->
+
+                <!--新品 S-->
+                <div class="fold select-gift">
+                    <span class="">
+                        <a class="gifts"
+                            href="https://www.kingpower-cn.com/search?keyword=%E9%A6%99%E6%B0%B4&amp;newGood=1"><i
+                                class="input-gift"></i> 新品</a>
+                    </span>
+                </div>
+
+                <div class="fold select-gift">
+                    <input id="inputSel" class="input_sel" type="text" name="lname" value="" placeholder="请输入商品名称">
+                    <label class="butselect" onclick="brandShow.brandSelectSubBut()">搜索</label>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- 商品列表循环  -->
+    <!-- 渲染商品 -->
+    <div class="nch-g-list wrapper">
+        <ul class="list_pic list_pic_goods_box">
+
+
+        </ul>
+        <div class="pagination m-t-10 m-b-10 tr">
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+
+    <!--遮罩层-->
+    <div class="mask-box"></div>
+    <!-- S 到货通知 -->
+    <div id="arrivalNoticeTpl" style="display:none;">
+        <form id="arrivalNoticeForm" novalidate="novalidate">
+            <div class="block-note">若商品在30日内到货，我们会通过短信、邮件和站内信来通知您哦~</div>
+            <dl>
+                <dt class="arriva">手机号码：</dt>
+                <dd class="arrivas p-l-10">
+                    <select class="type-select ipone_select" name="areaCode" id="areaCode"
+                        style="float: left;height: 29px;color: #0B56A4;border-right:none;">
+                        <option value="+86">中国大陆+86</option>
+                        <option value="+852">中国香港+852</option>
+                        <option value="+853">中国澳门+853</option>
+                        <option value="+886">中国台湾+886</option>
+                        <option value="+66">泰国+66</option>
+                    </select>
+                    <input type="text" class="text w200" maxlength="11" name="mobile" id="arrivalNoticeMobile"
+                        style="margin-left: 0;text-indent:5px;height: 27px;line-height: 27px;" value="">
+                    <input type="hidden" id="arrivalNoticeMobileHidded" value="">
+                </dd>
+            </dl>
+            <dl>
+                <dt class="arriva">邮箱号码：</dt>
+                <dd class="arrivas">
+                    <input type="text" style="margin-left: 0; width: 348px !important;" class="text w200" name="email"
+                        id="arrivalNoticeEmail" value="">
+                </dd>
+            </dl>
+        </form>
+    </div>
+    <!-- E 到货通知 -->
+    <div class="deliveryDiv" style="display: none;">
+        <div class="deliveryLi">
+            <label><input type="radio" value="1" name="delivery" class="checkbox J-spu-checkbox">机场提货</label>
+            <p>请于离境前前往离境机场相应提货处去提取所购买的商品。</p>
+        </div>
+        <div class="deliveryLi">
+            <label><input type="radio" value="2" name="delivery" class="checkbox J-spu-checkbox">直邮泰国</label>
+            <p>有直邮标签的商品可以选择该方式，邮寄地址为泰国境内地址，非泰国境内地址无法邮寄。</p>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="../css/perfect-scrollbar.min.css">
+
+    <div id="faq">
+        <div class="wrapper">
+            <ul>
+                <li>
+                    <dl class="s1">
+                        <dt>客服中心</dt>
+                        <dd>
+                            <a href="javascript:;">常见问题</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">购物须知</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">网上购物流程</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">退换货</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">取货指南</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">携带登机限制指南</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">条款与条件</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">隐私条款</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="s1">
+                        <dt>市区分店</dt>
+                        <dd>
+                            <a href="javascript:;">王权免税云顶大都分店</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;>王权免税曼谷市区店</a>
+            </dd>
+            <dd>
+              <a href=" javascript:;>王权免税史万利分店</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">王权免税芭提雅市区店</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">王权免税普吉市区店</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="s1">
+                        <dt>机场分店</dt>
+                        <dd>
+                            <a href="javascript:;">王权免税素万那普机场分店</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">王权免税廊曼机场分店</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">王权免税普吉机场分店</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">王权免税清迈机场分店</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">王权免税合艾机场分店</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">王权免税乌塔保机场分店</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="s1">
+                        <dt>关于我们</dt>
+                        <dd>
+                            <a href="javascript:;>愿景&amp;使命</a>
+            </dd>
+            <dd>
+              <a href=" javascript:;">高层管理团队</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">集团新闻</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">出版物</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">集团荣誉</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">加入我们</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="s1">
+                        <dt>泰国</dt>
+                        <dd>
+                            <a href="javascript:;">境内拨打：1631</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">境外拨打：+66(0)26778899</a>
+                        </dd>
+                        <dt>中国</dt>
+                        <dd>
+                            <a href="javascript:;">400-6301892</a>
+                        </dd>
+                        <dt>邮箱</dt>
+                        <dd>
+                            <a href="javascript:;">cscn@kingpower.com(线上商城售后咨询)</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;">contact@kingpower.com(线下门店售后咨询)</a>
+                        </dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="wrapper">
+
+            <p>
+                <span class="footer_img"> <img src="../img/KingPowerLogo.png" alt="">
+                </span> <span class="footer_text">Copyright © 2018
+                    泰国KingPower免税店,All rights
+                    reserved.&nbsp;&nbsp;&nbsp;&nbsp;京ICP备15056981号-4<br>
+                </span>
+            </p>
+            <p style="padding-top: 0;">技术支持：杰西卡的秘密 Jessica's Secret</p>
+        </div>
+    </div>
+    <script src="../js/axios.js"></script>
+    <!-- <script src="../js/index.js"></script> -->
+    <script src="../js/commodity.js"></script>
+    <!-- <div class="floating_layer" style="z-index:999;top:225px;;height:80px">
+    <a class="buy" href="javascript:;" nc-add-cart="">
+        <i class="shopping-cart">
+
+        </i>加入购物车</a>
+    <a class="collect">
+        <i>
+
+        </i>
+    </a>
+</div> -->
+</body>
+
+</html>
+
+
+
+
+

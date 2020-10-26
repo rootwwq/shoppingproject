@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <!-- <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/registered.css">
+	<script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+     -->
+     <link rel="stylesheet" href="./css/public.css">
+     <link rel="stylesheet" href="./css/registered.css">
+     <script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<style>
+.demo{width:300px; margin:60px auto 10px auto}
+@media only screen and (min-width: 420px) {
+	.demo{width:500px; margin:60px auto 10px auto}
+}
+button, .button {
+  background-color: #AEDEF4;color: white;border: none;box-shadow: none;
+  font-size: 17px;font-weight: 500;font-weight: 600;
+  border-radius: 3px;padding: 15px 35px;margin: 26px 5px 0 5px;cursor: pointer; }
+button:hover, .button:hover {background-color: #a1d9f2; }
+</style>
+<!-- <script src="sweetalert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="sweetalert.css">	 -->
+<script src="./js/sweetalert.min.js"></script>
+<link rel="stylesheet" href="./css/sweetalert.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <a href="javascript:"><img src="./logo.png" alt=""></a>
+        <span class="span">我已经注册,&nbsp;现在就&nbsp;<a class="denglu" href="http://localhost/project/login/login.html"><strong
+                    style="font-size: 15px;">登录</strong></a></span>
+    </header>
+    <!-- banner部分 -->
+    <div class="banner">
+        <ul class="box">
+            <p class="user">用户注册</p>
+            <div class="input">
+                <span>用户名:</span>
+                <input type="text" id="user" placeholder="由字母和数字组成，以字母开头">
+                <img class="input-tip" id="input-tip" src="./img/download_03.jpg">
+
+            </div>
+            <div style="width:300px; height: 14px;">
+                <div class="project">
+                    <p class="one suers ">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请以字母开头,输入不合法!!!</p>
+                </div>
+            </div>
+            <div class="input">
+                <span>密码:</span>
+                <input type="password" id="pwd" placeholder="由字母和数字组成的4-10位字符">
+                <img class="input-tip" id="input-tip" src="./img/download_03.jpg">
+            </div>
+            <div style="width:300px; height: 14px;">
+                <div class="project">
+                    <p class="one pass">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;密码输入应在4-10位之间!!!</p>
+                </div>
+            </div>
+            <div class="input">
+                <span>确认密码:</span>
+                <input type="password" id="repwd" placeholder="再次确认密码">
+                <img class="input-tip" id="input-tip" src="./img/download_03.jpg">
+            </div>
+            <div style="width:300px; height: 14px;">
+                <div class="project">
+                    <p class="one passwd">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;两次输入的密码不一致!!!</p>
+                </div>
+            </div>
+            <div class="input">
+                <span>验证码:</span>
+                <input type="text" id="yanzheng" placeholder="字母不区分大小写">
+                <i class="verification" id="verification">
+                </i>
+                <img class="input-tip" id="input-tip" src="./img/download_03.jpg">
+                <a class="code-pic" id="code-pic"><p onclick=onclode()>看不清，更换一张</p></a>
+            </div>
+            <div style="width:300px; height: 14px;">
+                <div class="project">
+                    <p class="one pass">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;验证码输入错误!!!</p>
+                </div>
+            </div>
+
+            <!-- <submit>立即注册</button> -->
+            <div class="input">
+                <input id="button" value="立即注册" type="button"></input>
+            </div>
+        </ul>
+    </div>
+
+
+    <!--  -->
+ 
+    <!--  -->
+    <footer>
+        <img src="./KingPowerLogo.png" alt="">
+        <p class="first">Copyright &copy; 2018 泰国KingPower免税店,All rights reserved. 京ICP备15056981号-4
+
+        </p>
+        <p class="second">技术支持：小乾子网络工作室</p>
+    </footer>
+<div id="main" style="display: none;">
+	<div class="demo">
+		<div class="demo_2">
+		<!-- 	<button>点击这里</button> -->
+		</div>
+		<div class="demo_3">
+		<!-- <button>点击这里</button> -->
+		</div>
+	</div>
+</div>	
+    <script src="./js/axios.js"></script>
+    <!-- <script src="../jquery-2.2.4.js"></script> -->
+    <script src="./registered.js"></script>
+
+</body>
+
+</html>
